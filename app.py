@@ -7,7 +7,9 @@ import joblib
 app = Flask(__name__)
 CORS(app)
 
+print("Loading model...")
 model = joblib.load('heart_model.pkl')
+print("Model loaded successfully")
 
 @app.route('/')
 def home():
